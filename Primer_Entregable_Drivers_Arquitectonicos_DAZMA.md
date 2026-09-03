@@ -465,8 +465,6 @@ Se registraron **99 escenarios**, agrupados en **45 características**. La votac
 
 ## 5. Resultado de Ronda 1
 
-Los **20 escenarios con al menos un punto** son los que aparecen especificados en la hoja **Especificación Ronda 1** y constituyen los candidatos de Ronda 2.
-
 | Código escenario | Atributo | Comprador | Vendedor | Administrador | Total |
 |---|---|---:|---:|---:|---:|
 | ESC-CAL-SEG-0002 | Seguridad | 1 | 1 | 1 | 3 |
