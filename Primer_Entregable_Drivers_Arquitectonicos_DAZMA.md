@@ -1,18 +1,3 @@
-# Primer entregable de Drivers Arquitectónicos — DAZMA
-
-
-## Control de completitud
-
-| Elemento | Cantidad |
-|---|---:|
-| Requisitos funcionales | 47 |
-| Funcionalidades críticas/significativas | 15 |
-| Atributos de calidad | 11 |
-| Características de la lluvia de escenarios | 45 |
-| Escenarios de la lluvia (Ronda 1) | 99 |
-| Escenarios que pasan a Ronda 2 | 20 |
-| Escenarios finales | 12 |
-
 ## 1. Requisitos funcionales
 
 **Resumen:** 47 requisitos; 16 impactan al negocio (34.04%) y 2 están marcados como reto tecnológico (4.26%).
