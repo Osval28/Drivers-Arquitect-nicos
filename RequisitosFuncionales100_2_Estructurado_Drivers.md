@@ -1,0 +1,100 @@
+# Drivers Arquitectónicos — Requisitos, Funcionalidades y Atributos de Calidad
+
+## Control de completitud
+
+| Elemento | Cantidad | Hoja de origen |
+|---|---:|---|
+| Requisitos funcionales | 47 | `Requisitos Funcionales` |
+| Funcionalidades críticas/significativas | 15 | `Funcionalidades Críticas` |
+| Atributos de calidad | 11 | `Atributos de Calidad` |
+| Hojas cubiertas | 3 de 3 | Libro completo |
+
+## 1. Requisitos funcionales
+
+**Resumen:** 47 requisitos; 16 impactan al negocio (34.04%) y 2 están marcados como reto tecnológico (4.26%).
+
+| ID | Descripción | ¿Impacta al negocio? | ¿Es un reto tecnológico? | ¿Por qué? |
+|---|---|:---:|:---:|---|
+| RF-01 | El sistema debe permitir registrar usuarios con nombre, apellido, correo y contraseña | No | No | Es genérico, es un problema ya resuelto |
+| RF-02 | El sistema debe permitir iniciar sesión con usuario/correo y contraseña al sistema | No | No | Es genérico, es un problema ya resuelto |
+| RF-03 | El sistema debe permitir cerrar sesión | No | No | Es genérico, es un problema ya resuelto |
+| RF-04 | El sistema debe permitir recuperar la contraseña en caso de que el usuario la haya olvidado | No | No | Es genérico, es un problema ya resuelto |
+| RF-05 | El sistema debe permitirle a un usuario consultar su propia información | No | No | Es genérico, es un problema ya resuelto |
+| RF-06 | El sistema condiciona las funcionalidaddes de acuerdo a su rol y datos de usuario | Sí | No | Porque afecta directamente a la reputación de la plataforma y qué tanto confían los usuarios en la plataforma |
+| RF-07 | El sistema debe permitirle al usuario eliminar su cuenta | No | No | Es genérico, es un problema ya resuelto |
+| RF-08 | El sistema debe permitirle al usuario actualizar sus datos | No | No | Es genérico, es un problema ya resuelto |
+| RF-09 | El sistema debe permitir crear publicaciones con producto, tipo (Compra/intercambio), nombre, descripción, fotos, ciudad e información de contacto | Sí | No | Es nuestra propuesta de valor principal |
+| RF-10 | El sistema debe permitir editar cualquier apartado de una publicación creada | No | No | Es una funcionalidad genérica |
+| RF-11 | El sistema debe permitir visualizar las publicaciones | No | No | Es una funcionalidad genérica |
+| RF-12 | El sistema debe permitir eliminar publicaciones | No | No | CRUD genérico, sin valor diferencial ni dificultad técnica. |
+| RF-13 | El sistema debe permitir filtrar las publicaciones por parámetros como ciudad, precio o categoría | Sí | No | Filtrar por ciudad es importante para la idea de negocio |
+| RF-14 | El sistema debe permitir agregar productos a una lista de favoritos | No | No | Es una funcionalidad genérica |
+| RF-15 | El sistema debe permitir realizar propuestas de intercambio con producto, valor, encime y lugar | Sí | No | Es nuestro motor principal de generación de valor |
+| RF-16 | El sistema debe permitir realizar contraofertas a un intercambio propuesto | Sí | No | Es parte del posible flujo de los intercambios |
+| RF-17 | El sistema debe verificar que un usuario no se haga una propuesta de intercambio o se compre a sí mismo | No | No | Es una verificación básica |
+| RF-18 | El sistema debe marcar una publicación como no disponible luego de que se finalice una compra o intercambio de la misma | No | No | Es algo genérico |
+| RF-19 | El sistema debe permitir aceptar o rechazar propuestas de intercambio | Sí | No | Porque permite fomalizar el intercambio, que es parte fundamental del negocio |
+| RF-20 | El sistema debe permitir comprarle un producto directamente al vendedor | Sí | No | Es la función principal de uno de nuestros segmentos |
+| RF-21 | El sistema debe permitir pagar el encime de un intercambio a través de una pasarela | Sí | No | Aquí se garantiza que el dinero pase por la plataforma, asegurando la monetización de la misma |
+| RF-22 | El sistema debe retener el dinero de una compra o intercambio hasta la confirmación de entrega por parte de ambos miembros | Sí | Sí | Es una función de alto impacto porque protege el dinero mientras la operación no ha finalizado. Además, plantea un reto técnico por la coordinación de estados, confirmaciones de ambas partes e integración con un proveedor de pagos cuya capacidad de retención debe validarse. |
+| RF-23 | El sistema debe liberar el dinero hacia el vendedor/persona con el objeto de mayor valor en un intercambio luego de la confirmación de entrega por parte de ambos miembros | Sí | Sí | Es crítica para el cierre financiero de la operación. Requiere garantizar que la liberación ocurra una sola vez, al destinatario correcto y únicamente cuando se cumplan las condiciones de finalización definidas. |
+| RF-24 | El sistema debe calcular la comisión del valor de la compra o encime de un intercambio | No | No | Es lógica de las comisiones que se hayan tomado de forma matemática |
+| RF-25 | El sistema debe permitir suscribirse a uno de los planes premium que ofrece la plataforma pagando a través de una pasarela de pago | No | No | Es un patrón freemium estándar, ya está establecido |
+| RF-26 | El sistema debe permitir crear nuevos planes de suscripción | No | No | Es un CRUD simple desde la parte administrativa |
+| RF-27 | El sistema debe permitir cancelar su suscripción a un plan premium | No | No | Es una funcionalidad de gestión de cuenta genérica |
+| RF-28 | El sistema debe permitir pagar una insignia de verificación por medio de una pasarela de pago | No | No | No se necesita implementar una pasarela de pago, solo integrarla |
+| RF-29 | El sistema debe priorizar en los resultados de búsqueda y listados las publicaciones de usuarios con un plan premium activo. | No | No | Es una regla de ordenamiento que puede seguir algoritmos ya creados y probados |
+| RF-30 | El sistema debe notificarle al usuario por medio de correo electrónico que hay nuevos mensajes en un chat | No | No | Es un patrón estándar de notificaciones, hay soluciones ya creadas y no es nuestro diferencial competidor |
+| RF-31 | El sistema debe notificarle al usuario por medio de correo electrónico propuestas de intercambio o compra | No | No | Es un patrón estándar de notificaciones, hay soluciones ya creadas y no es nuestro diferencial competidor |
+| RF-32 | El sistema debe permitir iniciar un chat con el dueño de una publicación para aclarar detalles de la negociación | No | No | Es una funcionalidad básica no inherente a la generación de valor del proyecto, además de que es un problema ya solucionado y probado ampliamente |
+| RF-33 | El sistema debe permitir enviar mensajes en un chat | No | No | Es una funcionalidad básica no inherente a la generación de valor del proyecto, además de que es un problema ya solucionado y probado ampliamente |
+| RF-34 | El sistema debe permitir calificar a un usuario luego de un intercambio o compra en una escala numérica de 1 a 5 | Sí | No | Es una funcionalidad que aumenta la cantidad de datos para la reputación de un usuario, lo que es importante para cumplir con la promesa de confianza de la plataforma |
+| RF-35 | El sistema debe permitir al usuario acceder a su historial de compras e intercambios finalizados o en curso con el estado en que se encuentre | No | No | Es una funcionalidad básica que no genera valor al negocio y no tiene una gran complejidad de implementación |
+| RF-36 | El sistema debe permitir acceder al historial de intercambios de cualquier usuario | Sí | No | Es una funcionalidad importante para cumplir con la promesa de confianza del proyecto |
+| RF-37 | El sistema debe permitir consultar la reputación de un usuario | Sí | No | Es la manera en que un usuario puede tener o no confianza en realizar una compra/intercambio con otro |
+| RF-38 | El sistema debe permitir reportar publicaciones con contenido inapropiado o engañoso | No | No | Es una moderación genérica presente en cualquier plataforma |
+| RF-39 | El sistema debe permitir reportar usuarios por incumplir las normas de la plataforma | No | No | Mismo caso, funcionalidad de moderación genérica. |
+| RF-40 | El sistema debe permitir visualizar los reportes a los administradores | No | No | Es una herramienta administrativa interna, consulta simple. |
+| RF-41 | El sistema debe permitir a los administradores marcar al usuario responsable de una publicación o comportamiento inapropiado en chat con un strike. | No | No | Es una moderación genérica y sin mucha complejidad técnica |
+| RF-42 | El sistema debe permitir a cada parte de un intercambio o compra confirmar que la entrega presencial fue completada exitosamente. | Sí | No | Es crítica porque conecta la operación digital con la entrega presencial. La doble confirmación afecta el estado final de la operación y puede habilitar acciones económicas posteriores, por lo que requiere controlar concurrencia y transiciones válidas. |
+| RF-43 | El sistema debe permitir cancelar una propuesta de intercambio o compra antes de su confirmación final. | Sí | No | Es crítica porque define un camino principal del ciclo de vida de una negociación. Debe establecerse en qué estados puede cancelarse y qué efectos produce sobre confirmaciones, pagos retenidos y demás elementos relacionados. |
+| RF-44 | El sistema debe reembolsar el dinero retenido de una compra o intercambio si este se cancela antes de la confirmación de entrega. | Sí | No | Es crítica porque define qué ocurre con el dinero cuando una operación se cancela. Requiere mantener coherencia entre el estado interno y la operación externa de reembolso o reversión, y validar que el proveedor de pagos seleccionado soporte el flujo necesario. |
+| RF-45 | El sistema debe permitir consultar la lista de publicaciones marcadas como favoritas por el usuario. | No | No | Es una funcionalidad genérica, parte de un CRUD, no aporta valor al negocio |
+| RF-46 | El sistema debe permitir eliminar una publicación de la lista de favoritos del usuario. | No | No | Es una funcionalidad genérica, parte de un CRUD, no aporta valor al negocio |
+| RF-47 | El sistema debe permitir a los administradores cerrar la cuenta de un usuario responsable de una publicación o comportamiento inapropiado en chat. | No | No | Es una accción administrativa estándar que no aporta valor de negocio |
+
+## 2. Funcionalidades críticas / significativas
+
+| Código | Funcionalidad crítica | Justificación |
+|---|---|---|
+| RF-15 | El sistema debe permitir realizar propuestas de intercambio con producto, valor, encime y lugar | Es crítica porque materializa el dominio de negocio de nuestro proyecto: La negociación de intercambios. Permite iniciar una operación especificando los productos que serán negociados y constituye el punto de partida del flujo principal de generación de valor de la plataforma. |
+| RF-16 | El sistema debe permitir realizar contraofertas a un intercambio propuesto | Es crítica porque forma parte directamente del mecanismo de negociación que diferencia al proyecto de un marketplace convencional. Permitir contraofertas hace posible que el intercambio sea dinámico y no se limite a una propuesta de compra de un solo lado. |
+| RF-20 | El sistema debe permitir comprarle un producto directamente al vendedor | Es crítica porque, aunque la compra directa es un segmento secundario del negocio, reutiliza el mecanismo económico mediante el cual se obtienen ingresos. La comisión se calcula sobre el dinero que pasa por la plataforma, por lo que esta funcionalidad condiciona capacidades relacionadas con pagos, comisiones y ciclo de vida de la operación. |
+| RF-22 | El sistema debe retener el dinero de una compra o intercambio hasta la confirmación de entrega por parte de ambos miembros | Es crítica por su impacto en la confianza y por el riesgo económico asociado. La retención depende del estado de la operación, de la confirmación de ambas partes y de una integración externa cuya capacidad real debe validarse antes de adoptar un proveedor. |
+| RF-23 | El sistema debe liberar el dinero hacia el vendedor/persona con el objeto de mayor valor en un intercambio luego de la confirmación de entrega por parte de ambos miembros | Es crítica porque determina el resultado financiero de un intercambio con diferencia monetaria. El sistema debe identificar quién debe recibir los fondos y garantizar que la liberación ocurra únicamente después de cumplirse la finalización de la operación |
+| RF-42 | El sistema debe permitir a cada parte de un intercambio o compra confirmar que la entrega presencial fue completada exitosamente. | Es crítica porque conecta la negociación digital con el evento físico que permite finalizarla. La confirmación de ambas partes condiciona el estado final y puede habilitar la liberación de fondos, por lo que debe manejarse correctamente la concurrencia entre confirmaciones. |
+| RF-43 | El sistema debe permitir cancelar una propuesta de intercambio o compra antes de su confirmación final. | Es crítica porque define uno de los caminos principales de la máquina de estados de una operación. Debe determinarse cuándo una cancelación es válida y qué consecuencias produce sobre pagos, confirmaciones y estados relacionados. |
+| RF-44 | El sistema debe reembolsar el dinero retenido de una compra o intercambio si este se cancela antes de la confirmación de entrega. | Es crítica porque establece qué pasa con el dinero cuando una operación no llega a completarse. Forma parte de la garantía financiera ofrecida por la plataforma y debe coordinarse con el estado de la operación y con la pasarela de pagos para evitar que una cancelación deje el dinero en el lugar incorrecto |
+| RF-19 | El sistema debe permitir aceptar o rechazar propuestas de intercambio | Es crítica porque formaliza el resultado de la negociación. La aceptación o rechazo determina si una propuesta se convierte en una operación acordada o finaliza sin intercambio entre dichos usuarios. |
+| RF-34 | El sistema debe permitir calificar a un usuario luego de un intercambio o compra en una escala numérica de 1 a 5 | Es una funcionalidad que aumenta la cantidad de datos para la reputación de un usuario, lo que es importante para cumplir con la promesa de confianza de la plataforma, y asi los usuarios puedan tener confinza a la hora de comprar |
+| RF-36 | El sistema debe permitir acceder al historial de intercambios de cualquier usuario | Es una funcionalidad importante para cumplir con la promesa de confianza del proyecto, y a su vez, permite ver la confiabilidad de la persona con la cual realizará el intercambio o, en su defecto, a quien le comprara algun producto |
+| RF-37 | El sistema debe permitir consultar la reputación de un usuario | Porque facilita que un usuario tenga o no confianza en realizar una compra/intercambio con otro, lo cual le da seguridad en la plataforma. Así puede ver si este usuario es confiable, es bueno y cómo le ha ido en sus intercambios anteriores |
+| RF-09 | El sistema debe permitir crear publicaciones con producto, tipo (Compra/intercambio), nombre, descripción, fotos y ciudad | Es significativa porque las publicaciones son el punto de entrada del marketplace y permiten representar la oferta disponible para compra o intercambio. Sin este elemento no puede iniciarse el flujo comercial principal ni materializarse la propuesta de valor |
+| RF-13 | El sistema debe permitir filtrar las publicaciones por parámetros como ciudad, precio o categoría | Los filtros ayudan a los compradores a ver articulos en especifico, permitiendo buscarlos por lugar de venta, precio, categorias y mas filtros que ayudan a facilitar las busquedas |
+| RF-06 | El sistema debe darle permisos a los usuarios basado en el rol que tiene (Admin, comprador/vendedor) | Es significativa porque asegura que solamente los usuarios implicados en una negociación (Compra/intercambio) puedan hacer |
+
+## 3. Atributos de calidad
+
+| Atributo de Calidad | Descripción | Implícito | Explícito | ¿Por qué? |
+|---|---|:---:|:---:|---|
+| Seguridad | Protección contra accesos no autorizados, ejecución indebida de operaciones críticas y exposición de información sensible o secretos. | X |  | Se considera implícito en los requisitos de cuentas, negociaciones y pagos: los RF describen qué operaciones existen, pero no especifican por sí solos controles como mínimo privilegio, deny by default o protección de secretos. |
+| Confiabilidad | Conservación de estados válidos ante fallas, idempotencia de operaciones críticas, aislamiento de fallos y prevención de efectos duplicados. | X |  | Es implícito porque los flujos de negociación y pagos sólo son correctos si no pierden, duplican o corrompen información ante fallas, reintentos o concurrencia. |
+| Capacidad para ser auditado | Posibilidad de reconstruir cronológicamente eventos críticos de una negociación u operación, identificando actor, momento, acción y resultado. | X |  | Es implícito porque las reclamaciones y operaciones económicas requieren evidencia verificable, aunque los requisitos funcionales no solicitan explícitamente un módulo de auditoría. |
+| Disponibilidad | Capacidad de mantener accesibles los flujos críticos y reducir la indisponibilidad durante cambios planificados o periodos de operación. | X |  | Es implícito porque compras, negociaciones, confirmaciones y operaciones críticas deben poder utilizarse cuando corresponde, aunque los RF no fijan un porcentaje de disponibilidad. |
+| Interoperabilidad | Capacidad de DAZMA para integrarse con servicios externos mediante contratos y protocolos definidos sin acoplar las reglas centrales a un proveedor concreto. |  | X | Es explícito porque varios requisitos requieren integración con servicios externos, especialmente la pasarela de pagos, y el proyecto contempla sustituir o incorporar proveedores mediante interfaces conocidas. |
+| Rendimiento | Tiempo de respuesta y latencia percibida en operaciones relevantes, especialmente la comunicación dentro de una negociación. |  | X | Es explícito porque la plataforma debe ser fluida a la hora de establecer comunicación entre los 2 actores de una negociación para que se sienta rápida |
+| Usabilidad UX | Comprensión clara de propuestas, contraofertas, estados y acciones importantes para que los usuarios puedan operar sin ambigüedad. |  | X | Es explícito porque el usuario debe comprender con claridad qué entrega y qué recibe al decidir sobre una propuesta o contraoferta, dado que un flujo técnicamente correcto puede fallar si el usuario interpreta mal la operación, lo cual es sumamente importante para la seguridad que ofrece la plataforma |
+| Escalabilidad | Capacidad de absorber crecimiento y picos de demanda sin una caída general ni reconstruir las funcionalidades centrales. | X |  | Es implícito porque el comportamiento esperado de la plataforma ante picos de tráfico y crecimiento de solicitudes es algo importante para cualquier e-commerce |
+| Capacidad | Volumen de usuarios, negociaciones, conversaciones, publicaciones y recursos que la plataforma puede soportar dentro de límites operativos definidos. | X |  | Es implícito porque todo sistema tiene límites de volumen y concurrencia, pero el negocio todavía debe definir los objetivos cuantitativos para cada etapa de crecimiento. |
+| Accesibilidad | Posibilidad de que las funciones principales sean utilizables por personas con diferentes capacidades y mediante tecnologías de asistencia. | X |  | Se mantiene como atributo del proyecto, aunque no quedó entre los escenarios finales priorizados. Los requisitos funcionales actuales no establecen medidas concretas de accesibilidad. |
+| Portabilidad | Capacidad de ejecutar y configurar la solución en entornos soportados sin modificar las reglas centrales del negocio ni depender innecesariamente de componentes propietarios. | X |  | Se mantiene como atributo del proyecto, aunque su prioridad es baja. Los RF no exigen un entorno específico, por lo que conviene evitar dependencias innecesarias mientras se toman las decisiones tecnológicas. |
