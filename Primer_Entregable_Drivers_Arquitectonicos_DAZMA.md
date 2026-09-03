@@ -1,6 +1,5 @@
 # Primer entregable de Drivers Arquitectónicos — DAZMA
 
-> Documento consolidado a partir de `RequisitosFuncionales100%(2).xlsx` y `Tradeoff(3).xlsx`.
 
 ## Control de completitud
 
