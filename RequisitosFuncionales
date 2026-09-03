@@ -1,14 +1,3 @@
-# Drivers Arquitectónicos — Requisitos, Funcionalidades y Atributos de Calidad
-
-## Control de completitud
-
-| Elemento | Cantidad | Hoja de origen |
-|---|---:|---|
-| Requisitos funcionales | 47 | `Requisitos Funcionales` |
-| Funcionalidades críticas/significativas | 15 | `Funcionalidades Críticas` |
-| Atributos de calidad | 11 | `Atributos de Calidad` |
-| Hojas cubiertas | 3 de 3 | Libro completo |
-
 ## 1. Requisitos funcionales
 
 **Resumen:** 47 requisitos; 16 impactan al negocio (34.04%) y 2 están marcados como reto tecnológico (4.26%).
