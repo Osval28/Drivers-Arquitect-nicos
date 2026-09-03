@@ -234,7 +234,7 @@ Se registraron **99 escenarios**, agrupados en **45 características**. La votac
 | Código escenario | Descripción del escenario | Comprador | Vendedor | Administrador | Total |
 |---|---|---:|---:|---:|---:|
 | ESC-CAL-AUD-0008 | Ante una reclamación, un usuario autorizado debe poder reconstruir cronológicamente los eventos críticos ocurridos durante una negociación y sus operaciones relacionadas. | 1 | 2 | 2 | 5 |
-| ESC-CAL-AUD-0009 | Cuando una operación falle, debe ser posible identificar posteriormente en qué etapa ocurrió el problema sin depender únicamente de la descripción del usuario (No entendí) | 0 | 0 | 0 | 0 |
+| ESC-CAL-AUD-0009 | Cuando una operación falle, debe ser posible identificar posteriormente en qué etapa ocurrió el problema sin depender únicamente de la descripción del usuario | 0 | 0 | 0 | 0 |
 
 ### 4.4 Disponibilidad
 
@@ -668,7 +668,7 @@ Se registraron **99 escenarios**, agrupados en **45 características**. La votac
 | Ambiente | Periodo de demanda significativamente superior a la operación habitual. |
 | Artefacto | Plataforma DAZMA y recursos que atienden las solicitudes. |
 | Respuesta | La plataforma utiliza capacidad adicional disponible o aplica mecanismos de control de carga, manteniendo operativos los flujos críticos sin una caída general. |
-| Métrica | En el volumen pico objetivo se presentan 0 caídas generales y los flujos críticos permanecen dentro de los límites de error y tiempo acordados |
+| Métrica | En el volumen pico objetivo se presentan 0 caídas generales y los flujos críticos(operaciones más importantes de la plataforma) permanecen dentro de los límites de error y tiempo acordados |
 
 #### ESC-CAL-REN-0001
 
