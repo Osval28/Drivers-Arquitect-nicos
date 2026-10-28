@@ -50,7 +50,7 @@ Muestra cuánto pesa cada atributo de calidad para el comprador, el vendedor y e
 
 [⬆ Volver al índice](#tabla-de-contenido)
 
-## 5. Matriz de transacción de tiempo
+## 5. Matriz de tiempos
 
 Tiempo máximo de respuesta esperado para cada transacción crítica. El 95% de las solicitudes debe responder dentro de ese valor. Se mide desde que el backend recibe la solicitud hasta que responde.
 
