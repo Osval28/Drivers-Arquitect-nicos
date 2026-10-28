@@ -6,11 +6,11 @@
 - [2. Restricciones](#2-restricciones)
 - [3. Drivers arquitectónicos](#3-drivers-arquitectónicos)
 - [4. Atributos de calidad y priorización](#4-atributos-de-calidad-y-priorización)
-- [5. Matriz de transacción de tiempo](#5-matriz-de-transacción-de-tiempo)
+- [5. Matriz de tiempos](#5-matriz-de-tiempos)
 - [6. Escenarios de calidad](#6-escenarios-de-calidad)
 - [7. Funcionalidades significativas y tácticas arquitectónicas](#7-funcionalidades-significativas-y-tácticas-arquitectónicas)
-- [8. Registros de decisiones arquitectónicas (ADR)](#8-registros-de-decisiones-arquitectónicas-adr)
-- [9. Vistas de arquitectura](#9-vistas-de-arquitectura)
+- [8. Architecture Decision Records](#8-architecture-decision-records)
+- [9. Modelos de arquitectura](#9-modelos-de-arquitectura)
 
 ## 1. Propósito del proyecto
 
@@ -29,8 +29,8 @@ DAZMA es un marketplace web para el Oriente Antioqueño enfocado en productos us
 
 | Sección | Ubicación |
 |---|---|
-| Requisitos funcionales (47 RF, con impacto al negocio y reto tecnológico) | [DriversArquitectonicos.md  1](DriversArquitectonicos.md#1-requisitos-funcionales) |
-| Funcionalidades críticas y significativas | [DriversArquitectonicos.md  2](DriversArquitectonicos.md#2-funcionalidades-críticas--significativas) |
+| Requisitos funcionales (47 RF, con impacto al negocio y reto tecnológico) | [DriversArquitectonicos.md § 1](DriversArquitectonicos.md#1-requisitos-funcionales) |
+| Funcionalidades críticas y significativas | [DriversArquitectonicos.md § 2](DriversArquitectonicos.md#2-funcionalidades-críticas--significativas) |
 
 [⬆ Volver al índice](#tabla-de-contenido)
 
