@@ -29,8 +29,8 @@ DAZMA es un marketplace web para el Oriente Antioqueño enfocado en productos us
 
 | Sección | Ubicación |
 |---|---|
-| Requisitos funcionales (47 RF, con impacto al negocio y reto tecnológico) | [DriversArquitectonicos.md § 1](DriversArquitectonicos.md#1-requisitos-funcionales) |
-| Funcionalidades críticas y significativas | [DriversArquitectonicos.md § 2](DriversArquitectonicos.md#2-funcionalidades-críticas--significativas) |
+| Requisitos funcionales (47 RF, con impacto al negocio y reto tecnológico) | [DriversArquitectonicos.md  1](DriversArquitectonicos.md#1-requisitos-funcionales) |
+| Funcionalidades críticas y significativas | [DriversArquitectonicos.md  2](DriversArquitectonicos.md#2-funcionalidades-críticas--significativas) |
 
 [⬆ Volver al índice](#tabla-de-contenido)
 
