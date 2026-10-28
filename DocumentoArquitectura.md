@@ -1,7 +1,5 @@
 # Documento de arquitectura de DAZMA
 
-Este documento reúne en un solo lugar la arquitectura de DAZMA. Las secciones que ya existen en otros archivos del repositorio se enlazan en lugar de copiarse, para que cada información viva en un único sitio. Solo la matriz de transacción de tiempo y las tácticas arquitectónicas se escriben aquí, porque no están en ningún otro archivo.
-
 ## Tabla de contenido
 
 - [1. Propósito del proyecto](#1-propósito-del-proyecto)
