@@ -15,7 +15,7 @@ El núcleo de DAZMA se basa en información relacionada: usuarios, publicaciones
 ## Factores de decisión
 
 - El modelo de datos debe representar correctamente las relaciones entre usuarios, publicaciones, propuestas, confirmaciones, pagos e historial
-- Debe proteger la integridad de la información para evitar datos sueltos, estados inválidos o relaciones que no deberían existir
+- Debe proteger la integridad de la información para evitar datos huérfanos, estados inválidos o relaciones que no deberían existir
 - También debe permitir consultas frecuentes del negocio, como buscar operaciones por usuario, publicación, estado o historial, sin dificultar el crecimiento futuro del sistema
 
 ## Opciones
